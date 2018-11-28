@@ -15,7 +15,7 @@ class SceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = SKScene(fileNamed:"MyScene") {
+        if let scene = MyScene(fileNamed:"MyScene") {
             let screensize = UIScreen.main.bounds.size
             skView.frame = CGRect(x: 0, y:0, width: screensize.width, height: screensize.height)
             skView.showsFPS = true // sceneのfps表示（開発用）

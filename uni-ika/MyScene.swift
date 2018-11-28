@@ -12,6 +12,26 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         // シーンが生成された
+        
+        // 背景変更
+        self.backgroundColor = SKColor.black
+        
+        // イメージ
+//        let node = SKSpriteNode(imageNamed: "uni")
+//        addChild(node)
+        
+        let ika = SKSpriteNode(imageNamed: "ika")
+        addChild(ika)
+        
+        
+        // ラベル
+        let label = SKLabelNode(fontNamed: "Chalkduster")
+        label.text = "Goodmorning, World!"
+        let labelSize: CGFloat = 50.0
+        label.fontSize = labelSize
+        label.position = CGPoint(x:self.frame.midX, y:self.frame.height/2 - labelSize)
+        label.fontColor = SKColor.yellow
+        self.addChild(label)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
